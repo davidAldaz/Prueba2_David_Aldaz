@@ -26,7 +26,7 @@ public class MainActivity_DIAS extends AppCompatActivity {
 
     private void setSharedPreferences() {
         // set default values in the app's SharedPreferences
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
 
         // Register a listener for shared preferences changes
         PreferenceManager.getDefaultSharedPreferences(this)

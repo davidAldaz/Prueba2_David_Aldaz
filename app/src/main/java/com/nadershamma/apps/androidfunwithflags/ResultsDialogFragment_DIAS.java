@@ -33,6 +33,7 @@ public class ResultsDialogFragment_DIAS extends DialogFragment{
                 try{
                     MainActivityFragment_DIAS quizFragment = (MainActivityFragment_DIAS) getParentFragment();
                     try{
+
                         quizFragment.resetQuiz();
                     }catch (Exception e){
                         Log.e(quizViewModelDIAS.getTag(),"Unable to call resetQuiz()", e);

@@ -46,6 +46,7 @@ public class MainActivityFragment_DIAS extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.quizViewModelDIAS = ViewModelProviders.of(getActivity()).get(QuizViewModel_DIAS.class);
+
     }
 
     @Override
@@ -123,6 +124,10 @@ public class MainActivityFragment_DIAS extends Fragment {
 
         this.updateGuessRows();
         this.loadNextFlag();
+    }
+
+    public void nexLevel(){
+
     }
 
     private void loadNextFlag() {

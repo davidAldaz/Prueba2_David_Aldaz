@@ -21,6 +21,7 @@ public class QuizViewModel_DIAS extends ViewModel {
     private int totalGuesses;
     private int correctAnswers;
     private int guessRows;
+    private int options = 2;
 
 
     public QuizViewModel_DIAS() {
@@ -130,5 +131,9 @@ public class QuizViewModel_DIAS extends ViewModel {
 
     public String getNextCountryFlag(){
         return quizCountriesList.remove(0);
+    }
+
+    public int setNewOptions(){
+        return this.options = this.options+2;
     }
 }

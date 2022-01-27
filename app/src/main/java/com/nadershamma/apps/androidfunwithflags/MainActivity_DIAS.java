@@ -23,21 +23,31 @@ public class MainActivity_DIAS extends AppCompatActivity {
     private MainActivityFragment_DIAS quizFragment;
     private QuizViewModel_DIAS quizViewModelDIAS;
     private OnSharedPreferenceChangeListener preferencesChangeListener;
-    Bundle data = getIntent().getExtras();
-    String userLog =data.getString("k_user");
 
-    private void setSharedPreferences() {
+    private void setSharedPreferences2(String userLog) {
         if(userLog.matches("admin")){
             PreferenceManager.setDefaultValues(this, R.xml.preferences_admin, false);
+            PreferenceManager.getDefaultSharedPreferences(this)
+                    .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
         }else if(userLog.matches("invitado")){
             PreferenceManager.setDefaultValues(this, R.xml.preferences_inv, false);
+            PreferenceManager.getDefaultSharedPreferences(this)
+                    .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
         }
         // set default values in the app's SharedPreferences
         //PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
         // Register a listener for shared preferences changes
-        PreferenceManager.getDefaultSharedPreferences(this)
-                .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
+        //PreferenceManager.getDefaultSharedPreferences(this)
+        //      .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
+    }
+    private void setSharedPreferences() {
+        // set default values in the app's SharedPreferences
+        //PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+
+        // Register a listener for shared preferences changes
+        //PreferenceManager.getDefaultSharedPreferences(this)
+          //      .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
     }
 
     private void screenSetUp() {
@@ -58,8 +68,11 @@ public class MainActivity_DIAS extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        this.setSharedPreferences();
+        //this.setSharedPreferences();
         this.screenSetUp();
+        Bundle data = getIntent().getExtras();
+        String userLog = data.getString("k_user");
+        this.setSharedPreferences2(userLog);
     }
 
     @Override

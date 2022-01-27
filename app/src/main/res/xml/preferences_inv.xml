@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListPreference
-        android:defaultValue="2"
+        android:defaultValue="4"
         android:entries="@array/guesses_list"
         android:entryValues="@array/guesses_list"
         android:key="pref_numberOfChoices"

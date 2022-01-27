@@ -23,10 +23,17 @@ public class MainActivity_DIAS extends AppCompatActivity {
     private MainActivityFragment_DIAS quizFragment;
     private QuizViewModel_DIAS quizViewModelDIAS;
     private OnSharedPreferenceChangeListener preferencesChangeListener;
+    Bundle data = getIntent().getExtras();
+    String userLog =data.getString("k_user");
 
     private void setSharedPreferences() {
+        if(userLog.matches("admin")){
+            PreferenceManager.setDefaultValues(this, R.xml.preferences_admin, false);
+        }else if(userLog.matches("invitado")){
+            PreferenceManager.setDefaultValues(this, R.xml.preferences_inv, false);
+        }
         // set default values in the app's SharedPreferences
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
+        //PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
         // Register a listener for shared preferences changes
         PreferenceManager.getDefaultSharedPreferences(this)

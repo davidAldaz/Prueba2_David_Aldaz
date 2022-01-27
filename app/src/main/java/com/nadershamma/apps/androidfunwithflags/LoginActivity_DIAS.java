@@ -37,6 +37,7 @@ public class LoginActivity_DIAS extends AppCompatActivity {
         if(user.matches("admin") && passwd.matches("admin") ||
                 user.matches("invitado") && passwd.matches("invitado") ){
             Intent intent = new Intent(getApplicationContext(), MainActivity_DIAS.class);
+            intent.putExtra("k_user", user);
             startActivity(intent);
         }else{
             Toast.makeText(getApplicationContext(), "Credenciales incorrectas", Toast.LENGTH_LONG).show();

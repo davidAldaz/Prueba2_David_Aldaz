@@ -49,6 +49,10 @@ public class MainActivity_DIAS extends AppCompatActivity {
         PreferenceManager.getDefaultSharedPreferences(this)
                 .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
     }
+    private void newPreferences(){
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
+    }
 
     private void screenSetUp() {
         if (getScreenSize() == Configuration.SCREENLAYOUT_SIZE_LARGE ||

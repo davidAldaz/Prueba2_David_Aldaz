@@ -43,11 +43,11 @@ public class MainActivity_DIAS extends AppCompatActivity {
     }
     private void setSharedPreferences() {
         // set default values in the app's SharedPreferences
-        //PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
         // Register a listener for shared preferences changes
-        //PreferenceManager.getDefaultSharedPreferences(this)
-          //      .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
     }
 
     private void screenSetUp() {
@@ -68,11 +68,11 @@ public class MainActivity_DIAS extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //this.setSharedPreferences();
+        this.setSharedPreferences();
         this.screenSetUp();
         Bundle data = getIntent().getExtras();
         String userLog = data.getString("k_user");
-        this.setSharedPreferences2(userLog);
+        //this.setSharedPreferences2(userLog);
     }
 
     @Override

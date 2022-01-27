@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Fun With Flags</string>
+    <string name="app_name">Prueba2_FlagQuiz</string>
     <string name="action_settings">Settings</string>
     <string name="number_of_choices">Number of Choices</string>
     <string name="number_of_choices_description">Display 2, 4, 6 or 8 guess buttons</string>
@@ -17,4 +17,11 @@
     <string name="image_description">Image of the current flag in the quiz</string>
     <string name="default_region">Europe</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="txt_login">Ingreso al juego</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="txt_credentials">Credenciales de acceso (2 usuarios):</string>
+    <string name="txt_user1">User: admin --- Pass: admin</string>
+    <string name="txt_user2">User: invitado --- Pass: invitado</string>
+    <string name="txt_user">Usuario</string>
+    <string name="txt_password">Contraseña</string>
 </resources>
